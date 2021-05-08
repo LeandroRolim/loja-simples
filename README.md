@@ -7,14 +7,42 @@
 
 API Rest desenvolvida em laravel para uma loja de demonstração
 
-## Features
+## Funcionalidades
 
 - CRUD produtos
 - CRUD cupons
 - CRUD usuários
 - Cross platform
 
+## deploy local
+O ambiente de desenvolvimento foi construído usando o [Laravel Sail][https://laravel.com/docs/8.x/sail]
+```shell
+  composer install
+  ./vendor/bin/sail up -d
+```
+Acesse: [localhost][http://localhost]
 
-## Authors
+## Testes
+
+### PHP CodeSniffer
+```shell
+  ./vendor/bin/phpcs --standard=psr12 app
+```
+
+###Psalm
+```shell
+  ./vendor/bin/psalm
+```
+
+###PHP Unit
+```shell
+  sail test
+```
+
+## Autor
 
 - [@LeandroRolim](https://www.github.com/LeandroRolim)
+
+[http://localhost]: http://localhost
+
+[Laravel]: https://laravel.com/docs/8.x/sail
