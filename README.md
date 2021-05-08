@@ -15,12 +15,12 @@ API Rest desenvolvida em laravel para uma loja de demonstração
 - Cross platform
 
 ## deploy local
-O ambiente de desenvolvimento foi construído usando o [Laravel Sail][https://laravel.com/docs/8.x/sail]
+O ambiente de desenvolvimento foi construído usando o [Laravel Sail](https://laravel.com/docs/8.x/sail)
 ```shell
   composer install
   ./vendor/bin/sail up -d
 ```
-Acesse: [localhost][http://localhost]
+Acesse: [localhost](http://localhost)
 
 ## Testes
 
