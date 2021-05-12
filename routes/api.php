@@ -19,7 +19,6 @@ Route::get('stats', StatsController::class);
 Route::get('categories', [CategoryController::class, 'index']);
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::post('categories', [CategoryController::class, 'store']);
+    Route::get('/user', fn (Request $request) => $request->user());
 });
