@@ -27,7 +27,7 @@ return [
 
     'allowed_origins' => [
         'localhost',
-        'http://localhost:*',
+        env('APP_URL') . ':*',
         '*.leandrorolim.com.br',
     ],
 
