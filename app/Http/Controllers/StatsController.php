@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\User;
 
 class StatsController extends Controller
 {
@@ -12,6 +13,10 @@ class StatsController extends Controller
             [
                 'title' => __('Categories'),
                 'total' => Category::count(),
+            ],
+            [
+                'title' => __('Users'),
+                'total' => User::count(),
             ],
         ];
     }
