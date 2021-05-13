@@ -3,7 +3,6 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use JetBrains\PhpStorm\ArrayShape;
 
 class CategoryResource extends JsonResource
 {
@@ -12,7 +11,6 @@ class CategoryResource extends JsonResource
      *
      * @return array
      */
-    #[ArrayShape(['slug' => "string", 'category' => "string"])]
     public function toArray($request)
     {
         return [
