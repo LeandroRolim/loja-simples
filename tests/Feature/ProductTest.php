@@ -99,8 +99,6 @@ class ProductTest extends TestCase
         ]);
         $response = $this->actingAs($this->user)->deleteJson("/api/products/$product->id");
         $response->assertStatus(204);
-        $this->assertDatabaseMissing('products', [
-            'id' => $product->id
-        ]);
+        $this->assertSoftDeleted($product);
     }
 }
