@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use App\Models\Brand;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class BrandTest extends TestCase
@@ -34,7 +33,7 @@ class BrandTest extends TestCase
 
     public function test_get_one_brands()
     {
-        Brand::factory()->count(rand(0, 5))->create();
+        Brand::factory()->count(rand(1, 5))->create();
         $brand = Brand::inRandomOrder()->first();
         $response = $this->get("/api/brands/$brand->id");
 
