@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StatsController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,7 @@ Route::get('categories', [CategoryController::class, 'index']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('categories', [CategoryController::class, 'store']);
     Route::get('/user', fn (Request $request) => $request->user());
+    Route::apiResources([
+        'users' => UserController::class,
+    ]);
 });
