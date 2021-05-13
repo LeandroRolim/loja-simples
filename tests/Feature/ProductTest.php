@@ -70,7 +70,7 @@ class ProductTest extends TestCase
     public function test_update_product()
     {
         Product::factory()
-            ->count(rand(2, 10))
+            ->count(random_int(2, 10))
             ->for(Category::factory())
             ->for(Brand::factory())
             ->create();

@@ -25,7 +25,7 @@ class BrandTest extends TestCase
      */
     public function test_get_all_brands()
     {
-        Brand::factory()->count(rand(0, 5))->create();
+        Brand::factory()->count(random_int(0, 5))->create();
         $response = $this->get('/api/brands');
 
         $response->assertStatus(200);
@@ -33,7 +33,7 @@ class BrandTest extends TestCase
 
     public function test_get_one_brands()
     {
-        Brand::factory()->count(rand(1, 5))->create();
+        Brand::factory()->count(random_int(1, 5))->create();
         $brand = Brand::inRandomOrder()->first();
         $response = $this->get("/api/brands/$brand->id");
 
