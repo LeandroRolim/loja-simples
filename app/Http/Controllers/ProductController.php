@@ -39,7 +39,7 @@ class ProductController extends Controller
      */
     public function update(ProductUpdateRequest $request, Product $product)
     {
-        $product->update($request->all());
+        $product->update($request->except('photo'));
         return ProductResource::make($product);
     }
 
