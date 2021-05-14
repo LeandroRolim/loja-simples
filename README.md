@@ -46,3 +46,16 @@ Acesse: [localhost](http://localhost)
 [http://localhost]: http://localhost
 
 [Laravel]: https://laravel.com/docs/8.x/sail
+
+## Admin e Loja de demonstração
+
+- https://github.com/LeandroRolim/site-loja
+- https://github.com/LeandroRolim/loja-simples-admin
+
+## Demo
+
+Este projeto foi feito o deploy no heroku e firebase host:
+
+- https://apidev.leandrorolim.com.br (backend rodando no heroku)
+- https://site.leandrorolim.com.br (frontend da loja rodando no heroku)
+- https://admin.leandrorolim.com.br (admin da loja rodando no firebase)
