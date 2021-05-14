@@ -13,9 +13,12 @@ class CouponController extends Controller
      * Display a listing of the resource.
      *
      */
-    public function index()
+    public function index(Request $request, Coupon $coupon)
     {
-        return CouponResource::collection(Coupon::all());
+        if ($request->has('code')) {
+            $coupon = $coupon->where('code', $request->query('code'));
+        }
+        return CouponResource::collection($coupon->get());
     }
 
 
